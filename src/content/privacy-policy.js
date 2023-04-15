@@ -2,7 +2,7 @@ import React from "react";
 /* eslint-disable max-len */
 
 const privacyPolicyContent = {
-  companyWebsite: "REPLACE_ME__client-domain.com",
+  companyWebsite: "wedaretoshare.org",
   policies: [
     {
       isBold: false,

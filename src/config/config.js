@@ -1,9 +1,9 @@
 // CDN URL
 export const CDN_URL =
-  "https://cdn-e-and-b-solutions.s3.amazonaws.com/clients/harbor-centre";
+  "https://cdn-e-and-b-solutions.s3.amazonaws.com/clients/we-dare-to-share";
 
 // Client Name
-export const CLIENT_NAME = "Harbor Centre";
+export const CLIENT_NAME = "We Dare To Share";
 
 // Email
 export const POINT_OF_CONTACT_EMAIL = "REPLACE_ME__client-email@gmail.com";
