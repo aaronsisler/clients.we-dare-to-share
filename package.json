@@ -13,7 +13,8 @@
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
     "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE",
     "sb": "start-storybook -p 3000",
-    "build-sb": "build-storybook"
+    "build-sb": "build-storybook",
+    "npm-audit": "bash ./npm-audit.sh"
   },
   "engines": {
     "node": ">=16.0.0"
