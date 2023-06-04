@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import cn from "classnames";
 
-import Logo from "../logo";
-import Hyperlink from "../../atoms/hyperlink";
-import Hamburger from "../../atoms/hamburger";
+import { Logo } from "../logo";
+import { Hyperlink } from "../../atoms/hyperlink";
+import { Hamburger } from "../../atoms/hamburger";
 
-import navigationLinks from "../../content/navigation-links";
+import { navigationLinks } from "../../content/navigation-links";
 
 import styles from "./navbar.module.scss";
 
@@ -44,4 +44,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export { Navbar };
