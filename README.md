@@ -1,28 +1,4 @@
-# shells.client-next-12
-
-## Updates needed
-
-### Repo updates
-
-Do a global find on the repo for the following: `REPLACE_ME__`. This should speed up the below process.
-
-1. package.json - Update name
-1. package.json - deploy:beta/prod scripts
-1. Update title in \_app.js
-1. Update the next.config.js to include the URLs for beta and domain.
-1. Update the branch name in .github files to be `main` instead of `mainxy`
-1. Uncomment the deploy to beta in .github/pull-request.yml
-1. Update config.js with client information.
-1. Add navbar
-1. Add footer
-1. Choose font, update the fonts.scss file, and update MAIN_FONT in variables.scss
-
-### Github updates
-
-1. Setup the GHA secrets for:
-
-   - AWS_ACCESS_KEY_ID
-   - AWS_SECRET_ACCESS_KEY
+# clients.we-dare-to-share
 
 ## Repository Conventions
 
@@ -40,7 +16,15 @@ All imports and exports should be named and not defaulted.
 - Pages
   - A page should contain a `main` markup element wrapping a single imported container.
 
-## Creating S3, ACM, CloudFront, and Route 53
+## Creating ACM, S3, CloudFront, and Route 53
+
+### Create ACM Certificate
+
+1. Make sure ACM Certificate has:
+   - client-domain-name.com
+   - \*.client-domain-name.com
+1. Request the DNS based validation
+1. This will need to be Verified (not Pending validation) before Cloudfront can be completed
 
 ### Creating new S3 bucket
 
@@ -75,21 +59,17 @@ All imports and exports should be named and not defaulted.
      }
      ```
 
-### Create ACM Certificate
-
-1. Make sure ACM Certificate has:
-   - client-domain-name.com
-   - \*.client-domain-name.com
-1. Request the DNS based validation
-1. This will need to be Verified (not Pending validation) before Cloudfront can be completed
-
 ### Creating Cloudfront distribution
 
 **This is dependent on the above ACM Certificate step.**
 
+Only the items listed below need to be updated.
+
 1. Origin is the URL from S3 static domain
    - S3 -> Properties -> Static Website Hosting -> Copy that URL
 1. Viewer -> Viewer protocol policy -> Redirect HTTP to HTTPS
+1. Web Application Firewall (WAF)
+   - Enable security protections
 1. Settings
    - Price Class
      - Use only North America and Europe

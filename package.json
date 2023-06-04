@@ -1,19 +1,20 @@
 {
-  "name": "shells.client-next-12",
+  "name": "clients.we-dare-to-share",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "prebuild": "rm -rf ./build && rm -rf ./dist",
     "build": "next build ./src && next export -o dist ./src",
     "dev": "next dev",
-    "deploy:beta": "aws s3 sync ./dist s3://beta.REPLACE_ME__client-name-url.com --delete && aws cloudfront create-invalidation --distribution-id REPLACE_ME__CLOUDFRONT_ID --paths \"/*\"",
-    "deploy:prod": "aws s3 sync ./dist s3://REPLACE_ME__client-name-url.com --delete && aws cloudfront create-invalidation --distribution-id REPLACE_ME__CLOUDFRONT_ID --paths \"/*\"",
+    "deploy:beta": "aws s3 sync ./dist s3://beta.wedaretoshare.org --delete && aws cloudfront create-invalidation --distribution-id E2S0S17N7QHBVE --paths \"/*\"",
+    "deploy:prod": "aws s3 sync ./dist s3://wedaretoshare.org --delete && aws cloudfront create-invalidation --distribution-id E1CDFOO695T1Z0 --paths \"/*\"",
     "lint": "eslint \"./**/*.{js,jsx}\"",
     "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP",
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
     "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE",
     "sb": "start-storybook -p 3000",
-    "build-sb": "build-storybook"
+    "build-sb": "build-storybook",
+    "npm-audit": "bash ./npm-audit.sh"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -67,12 +68,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronsisler/clients.client-name.git"
+    "url": "git+https://github.com/aaronsisler/clients.we-dare-to-share.git"
   },
   "author": "Aaron Sisler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aaronsisler/clients.client-name/issues"
+    "url": "https://github.com/aaronsisler/clients.we-dare-to-share/issues"
   },
-  "homepage": "https://github.com/aaronsisler/clients.client-name#readme"
+  "homepage": "https://github.com/aaronsisler/clients.we-dare-to-share#readme"
 }
