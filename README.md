@@ -1,93 +1,62 @@
 # clients.we-dare-to-share
 
-## Repository Conventions
+## Technologies used in next-enterprise
 
-### Imports and Exports
+### File names to look into what tech they are from
 
-All imports and exports should be named and not defaulted.
+- .all-contributorsrc
+  - npm dev package that puts information into this file
+- .eslintrc.js
+  - Has some nice plugins and auto sorting/saving
+  - .eslintignore
+    - Folders to ignore i.e. node_modules, etc.
+- .pre-commit-config.yaml
+  - Requires the brew package `pre-commit`
+  - References a repo that seems to have the "default" rules
+  - https://pre-commit.com/
+- git-conventional-commits.yaml
+- .releaserc
 
-### Elements
+  - Uses npm semantic-release
+  - This is used in tandem with the git conventional commits plugin to figure out how to version the release given what was added/removed
+  - https://semantic-release.gitbook.io/semantic-release/usage/installation
 
-- Atoms
-  - An atom should be just a simple React component that just takes props, such as an image, input, or hyperlink
-- Components
-- Widgets
-- Containers
-- Pages
-  - A page should contain a `main` markup element wrapping a single imported container.
+- env.mjs
+  - @t3-oss/env-nextjs
+  - createEnv
+- instrumentation.ts
+  - @vercel/otel
+  - https://nextjs.org/docs/pages/building-your-application/optimizing/open-telemetry
+- jest.config.ts
+- next-env.d.ts
+  - https://nextjs.org/docs/basic-features/typescript
+- next.config.mjs
+  - https://nextjs.org/docs/pages/api-reference/next-config-js
+- playwright.config.ts
+- postcss.config.js
+- prettier.config.ts
+  - prettierignore
+- renovate.json
+- reset.d.ts
+- tailwind.config.js
+- tsconfig.json
+- storybook
 
-## Creating ACM, S3, CloudFront, and Route 53
+## Things to understand
 
-### Create ACM Certificate
+- .mjs file types
+  - This is related to the import/export .mjs compared to require/module.exports .cjs
+- Folder and file structure
+  - https://nextjs.org/docs/getting-started/project-structure
+  - https://dev.to/vadorequest/a-2021-guide-about-structuring-your-next-js-project-in-a-flexible-and-efficient-way-472
+- What the GHA files are doing
 
-1. Make sure ACM Certificate has:
-   - client-domain-name.com
-   - \*.client-domain-name.com
-1. Request the DNS based validation
-1. This will need to be Verified (not Pending validation) before Cloudfront can be completed
+## Conventions
 
-### Creating new S3 bucket
-
-1. Create new bucket
-
-   - Public Access all the boxes
-
-1. Properties tab
-
-   - Enable Static Hosting
-   - Index and Error document
-
-     ```
-     index.html
-     ```
-
-1. Permissions tab
-
-   - Bucket Policy
-
-     ```
-     {
-        "Version": "2012-10-17",
-        "Statement": [
-           {
-                 "Effect": "Allow",
-                 "Principal": "*",
-                 "Action": "s3:GetObject",
-                 "Resource": "arn:aws:s3:::beta.client-domain-name.com/*"
-           }
-        ]
-     }
-     ```
-
-### Creating Cloudfront distribution
-
-**This is dependent on the above ACM Certificate step.**
-
-Only the items listed below need to be updated.
-
-1. Origin is the URL from S3 static domain
-   - S3 -> Properties -> Static Website Hosting -> Copy that URL
-1. Viewer -> Viewer protocol policy -> Redirect HTTP to HTTPS
-1. Web Application Firewall (WAF)
-   - Enable security protections
-1. Settings
-   - Price Class
-     - Use only North America and Europe
-   - Alternate domain name (CNAME)
-     - Needs to be client-name.com or beta.client-name.com
-   - Custom SSL certificate
-     - Needs to have the ACM Certificate that has both base and \*.client-domain-name.com
-   - Description
-     - At the bottom.
-     - Will have the client-domain-name.com or beta.client-domain-name.com
-
-### Create Route 53 records
-
-**This is dependent on the above CloudFront distribution step.**
-
-1. Add in a record for beta.client-domain-name.com
-   - Add `beta` in the Record name field
-   - Click the `Alias` toggle
-   - Route traffic to `Alias to CloudFront distribution`
-   - Select the correct CloudFront distribution
-1. Add in a record for client-domain-name.com
+- Will use a `src` folder
+- `src` will have:
+  - common
+  - features
+  - utils
+  - pages
+    - api
