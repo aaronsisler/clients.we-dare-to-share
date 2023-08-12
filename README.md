@@ -1,55 +1,23 @@
 # clients.we-dare-to-share
 
-## Technologies used in next-enterprise
+## Technologies
 
-### File names to look into what tech they are from
+### Dependencies
 
-- .all-contributorsrc
-  - npm dev package that puts information into this file
-- .eslintrc.js
-  - Has some nice plugins and auto sorting/saving
-  - .eslintignore
-    - Folders to ignore i.e. node_modules, etc.
-- .pre-commit-config.yaml
-  - Requires the brew package `pre-commit`
-  - References a repo that seems to have the "default" rules
-  - https://pre-commit.com/
-- git-conventional-commits.yaml
-- .releaserc
+- CVA - Classnames but better
+- NextJs - UI Framework
+- Radix UI - Accessible Web Components
+- Radix Theme - ?? Might use if easier than Tailwind for design system
+- React (UI/DOM Framework)
+- Tailwind CSS - CSS
 
-  - Uses npm semantic-release
-  - This is used in tandem with the git conventional commits plugin to figure out how to version the release given what was added/removed
-  - https://semantic-release.gitbook.io/semantic-release/usage/installation
+### Dev Dependencies
 
-- env.mjs
-  - @t3-oss/env-nextjs
-  - createEnv
-- instrumentation.ts
-  - @vercel/otel
-  - https://nextjs.org/docs/pages/building-your-application/optimizing/open-telemetry
-- jest.config.ts
-- next-env.d.ts
-  - https://nextjs.org/docs/basic-features/typescript
-- next.config.mjs
-  - https://nextjs.org/docs/pages/api-reference/next-config-js
-- playwright.config.ts
-- postcss.config.js
-- prettier.config.ts
-  - prettierignore
-- renovate.json
-- reset.d.ts
-- tailwind.config.js
-- tsconfig.json
-- storybook
-
-## Things to understand
-
-- .mjs file types
-  - This is related to the import/export .mjs compared to require/module.exports .cjs
-- Folder and file structure
-  - https://nextjs.org/docs/getting-started/project-structure
-  - https://dev.to/vadorequest/a-2021-guide-about-structuring-your-next-js-project-in-a-flexible-and-efficient-way-472
-- What the GHA files are doing
+- ES Lint
+- PostCSS
+- Prettier
+- Storybook
+- TypeScript
 
 ## Conventions
 
@@ -60,3 +28,13 @@
   - utils
   - pages
     - api
+
+## Nice To Have
+
+### Coupling Graph
+
+The `coupling-graph` script is a useful tool that helps visualize the coupling and connections between your project's internal modules. It's built using the [Madge](https://github.com/pahen/madge) library. To generate the graph, simply run the following command:
+
+```bash
+yarn coupling-graph
+```
