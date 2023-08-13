@@ -5,7 +5,7 @@
 ### Dependencies
 
 - CVA - Classnames but better
-- NextJs - UI Framework
+- Next.js - React Framework
 - Radix UI - Accessible Web Components
 - Radix Theme - ?? Might use if easier than Tailwind for design system
 - React (UI/DOM Framework)
