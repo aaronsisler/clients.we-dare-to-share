@@ -19,6 +19,13 @@
 - Storybook
 - TypeScript
 
+### Plugins/Extensions Needed
+
+- ESLint
+- PostCSS Language Support
+- Prettier - Code formatter
+- Tailwind CSS IntelliSense
+
 ## Conventions
 
 - Will use a `src` folder
