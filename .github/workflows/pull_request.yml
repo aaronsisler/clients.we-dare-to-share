@@ -1,39 +1,30 @@
-# name: Pull Request
+name: Pull Request
+on:
+  push:
+    branches:
+      - main
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#   workflow_dispatch:
+jobs:
+  Pull-Request:
+    name: Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v3
 
-# jobs:
-#   Pull-Request:
-#     name: Pull Request
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: "Setup Node"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
 
-#       - name: "use node ${{ env.node_version }}"
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: "${{ env.node_version }}"
-#       - name: Install dependencies
-#         run: yarn install --frozen-lockfile
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
-#       - name: Lint check
-#         run: yarn lint
+      - name: Lint check
+        run: yarn lint
 
-#       - name: Format check
-#         run: yarn prettier
+      - name: Format check
+        run: yarn format-check
 
-#       # - name: Unit & Integration tests
-#       #   run: yarn test
-
-#       - name: Smoke & Acceptance tests
-#         run: |
-#           yarn build-storybook --quiet
-#           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-#             "npx http-server storybook-static --port 6006 --silent" \
-#             "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook"
+      - name: Unit & Integration tests
+        run: yarn test
