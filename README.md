@@ -1,5 +1,11 @@
 # clients.we-dare-to-share
 
+## Task List
+
+- Get app working for base
+- Get app/page test working
+- Get base pages determined
+
 ## Technologies
 
 ### Dependencies
@@ -30,11 +36,11 @@
 
 - Will use a `src` folder
 - `src` will have:
-  - common
-  - features
+  - app
+  - components
+  - sections
+  - styles
   - utils
-  - pages
-    - api
 
 ## Nice To Have
 
