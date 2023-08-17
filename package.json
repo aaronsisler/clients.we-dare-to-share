@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
+    "format-check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mjs,cjs,json}\"",
     "lint": "next lint",
-    "format-check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mjs,cjs,json}\""
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "next": "13.4.13",
@@ -15,6 +16,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.3",
     "@types/node": "20.4.10",
