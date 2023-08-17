@@ -2,6 +2,7 @@
 
 ## Task List
 
+- Get GHA for base PR working
 - Get app working for base
 - Get app/page test working
 - Get base pages determined
