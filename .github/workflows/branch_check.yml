@@ -6,7 +6,7 @@ on:
 
 jobs:
   Branch-Check:
-    name: Pull Request
+    name: Branch Check
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
@@ -17,12 +17,12 @@ jobs:
           node-version: 20.x
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-#       - name: Lint check
-#         run: yarn lint
 
-#       - name: Format check
-#         run: yarn prettier
+      - name: Lint check
+        run: yarn lint
 
+      - name: Format check
+        run: yarn format-check
 #       # - name: Unit & Integration tests
 #       #   run: yarn test
 
