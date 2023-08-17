@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AppBase } from "./app-base";
 
 export const metadata: Metadata = {
-  title: "we Dare To Share",
+  title: "We Dare To Share",
   description: "This is a non-profit website for We Dare To Share.",
 };
 
