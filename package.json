@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "deploy:beta": "aws s3 sync ./dist s3://beta.wedaretoshare.org --delete && aws cloudfront create-invalidation --distribution-id E2S0S17N7QHBVE --paths \"/*\"",
+    "deploy:prod": "aws s3 sync ./dist s3://wedaretoshare.org --delete && aws cloudfront create-invalidation --distribution-id E1CDFOO695T1Z0 --paths \"/*\"",
     "dev": "next dev",
     "format-check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mjs,cjs,json}\"",
     "lint": "next lint",
