@@ -3,7 +3,6 @@ const nextConfig = {
   cleanDistDir: true,
   distDir: "./dist",
   output: "export",
-  trailingSlash: true,
 };
 
 module.exports = nextConfig;
