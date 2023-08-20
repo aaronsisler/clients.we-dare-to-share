@@ -1,12 +1,12 @@
-name: Pull Request
+name: Deploy Prod
+
 on:
-  pull_request:
-    branches:
-      - main
+  push:
+    branches: [main]
 
 jobs:
-  Pull-Request:
-    name: Pull Request
+  Deploy-Prod:
+    name: Deploy Prod
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
@@ -20,20 +20,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Lint check
-        run: yarn lint
-
-      - name: Format check
-        run: yarn format-check
-
-      - name: Unit & Integration tests
-        run: yarn test
-
       - name: Build release
         run: yarn build
 
       - name: Deploy to Beta
-        run: yarn run deploy:beta
+        run: yarn deploy:prod
         env:
           AWS_DEFAULT_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
