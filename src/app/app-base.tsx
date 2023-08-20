@@ -1,5 +1,12 @@
-// Using this App Base given an issue with metadata
-// not rendering in testint-library/react since it is a server comp
-const AppBase = () => <div>App Base</div>;
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+
+const AppBase = () => (
+  <div className="overflow-hidden bg-slate-900">
+    <Navbar />
+    <div>App Base</div>
+    <Footer />
+  </div>
+);
 
 export { AppBase };
