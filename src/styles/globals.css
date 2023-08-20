@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "PaypalSans Big Bold";
+  src: url("../fonts/PayPalSansBig-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Big Light";
+  src: url("../fonts/PayPalSansBig-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Big Medium";
+  src: url("../fonts/PayPalSansBig-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Big Regular";
+  src: url("../fonts/PayPalSansBig-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Small Bold";
+  src: url("../fonts/PayPalSansSmall-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Small Light";
+  src: url("../fonts/PayPalSansSmall-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Small Medium";
+  src: url("../fonts/PayPalSansSmall-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PaypalSans Small Regular";
+  src: url("../fonts/PayPalSansSmall-Regular.woff2") format("woff2");
+}
+
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;

@@ -1,12 +1,19 @@
 # clients.we-dare-to-share
 
+## Notes
+
+(Facebook Page)[https://www.facebook.com/profile.php?id=100093847931580]
+
 ## Task List
 
-- DONE: Get GHA for base PR working
-- DONE: Get app working for base
-- DONE: Get app/page test working
-- DONE: Deployment to beta and prod working
-- Get base pages determined
+- Navbar created
+- Footer creater
+- Landing Hero created
+  - Notes
+  - What you have to offer
+  - Why people should trust you
+  - The benefits of working with you
+  - What action they should take next
 
 ## Technologies
 
