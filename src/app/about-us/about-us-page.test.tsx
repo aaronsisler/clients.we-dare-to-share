@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
-import { AppBase } from "./app-base";
+import AboutUsPage from "./page";
 
-describe("App Base", () => {
+describe("Page: About Us", () => {
   it("renders correctly", async () => {
-    render(<AppBase />);
+    render(<AboutUsPage />);
   });
 });

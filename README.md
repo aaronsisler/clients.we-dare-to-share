@@ -5,7 +5,7 @@
 - DONE: Get GHA for base PR working
 - DONE: Get app working for base
 - DONE: Get app/page test working
-- Deployment to beta and prod working
+- DONE: Deployment to beta and prod working
 - Get base pages determined
 
 ## Technologies
