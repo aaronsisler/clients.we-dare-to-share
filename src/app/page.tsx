@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { AppBase } from "./app-base";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "We Dare To Share",
   description: "This is a non-profit website for We Dare To Share.",
 };
 
-// Using this App Base given an issue with metadata
-// not rendering in testint-library/react since it is a server comp
-const App = () => <AppBase />;
+const App = () => (
+  <div className="overflow-hidden bg-slate-900">
+    <Navbar />
+    <div>App Base</div>
+    <Footer />
+  </div>
+);
 
 export default App;
