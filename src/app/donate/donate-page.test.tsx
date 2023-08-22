@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
-import ContactPage from "./page";
+import DonatePage from "./page";
 
-describe("Page: Contact", () => {
+describe("Page: Donate", () => {
   it("renders correctly", async () => {
-    render(<ContactPage />);
+    render(<DonatePage />);
   });
 });

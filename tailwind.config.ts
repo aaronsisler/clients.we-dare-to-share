@@ -15,7 +15,7 @@ const config: Config = {
         "sans-big-medium": ["PaypalSans Big Medium"],
         "sans-big-regular": ["PaypalSans Big Regular"],
 
-        "sans-smmal-bold": ["PaypalSans Small Bold"],
+        "sans-small-bold": ["PaypalSans Small Bold"],
         "sans-small-light": ["PaypalSans Small Light"],
         "sans-small-medium": ["PaypalSans Small Medium"],
         "sans-small-regular": ["PaypalSans Small Regular"],

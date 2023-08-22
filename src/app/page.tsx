@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "We Dare To Share",
-  description: "This is a non-profit website for We Dare To Share.",
+  title: "We Dare To Share | A 501 (c) nonprofit organization that conducts humanitarian projects in Zimbabwe",
 };
 
 const App = () => (
-  <div className="overflow-hidden bg-slate-900">
-    <Navbar />
-    <div>App Base</div>
-    <Footer />
+  <div className="overflow-hidden">
+    <div>Home</div>
   </div>
 );
 
