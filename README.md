@@ -2,18 +2,17 @@
 
 ## Notes
 
-(Facebook Page)[https://www.facebook.com/profile.php?id=100093847931580]
-
 ## Task List
 
+- Flush out the wireframe for pages
 - Navbar created
 - Footer creater
 - Landing Hero created
   - Notes
-  - What you have to offer
-  - Why people should trust you
-  - The benefits of working with you
-  - What action they should take next
+    - What you have to offer
+    - Why people should trust you
+    - The benefits of working with you
+    - What action they should take next
 
 ## Technologies
 

@@ -2,7 +2,7 @@
 
 @layer base {
   html {
-    @apply text-sky-600;
+    @apply leading-8;
   }
 }
 

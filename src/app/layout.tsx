@@ -9,10 +9,10 @@ interface Props {
 
 const RootLayout = ({ children }: Props) => (
   <html lang="en">
-    <body className="h-screen px-24">
+    <body className="mb-28 flex h-screen flex-col lg:px-24">
       <Navbar />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </body>
   </html>
 );
